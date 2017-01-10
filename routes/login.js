@@ -11,6 +11,6 @@ exports.login = function(req, res) {
 	   .end(function(err, response){
 	   		console.log(response.body);
 	   		//res.send(200);
-	     	//res.json(response.body);
+	     	res.json(response.body);
 	   });
 };
