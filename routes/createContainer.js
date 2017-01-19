@@ -10,9 +10,8 @@ exports.createContainer = function(req, res) {
 	   .set('Accept', 'application/json')
 	   .send(json)
 	   .end(function(err, response){
-	   		console.log(response);
-	   		//res.send(200);
-	     	res.json(response.body);
+	   		if (response != undefined)
+	     		res.json(response.body);
 	   });
 };
 
@@ -26,9 +25,8 @@ exports.stopContainer = function(req, res){
 	   .set('Accept', 'application/json')
 	   .send(json)
 	   .end(function(err, response){
-	   		console.log(response.body);
-	   		//res.send(200);
-	     	res.json(response.body);
+	   		if (response != undefined)
+	     		res.json(response.body);
 	   });
 
 }
@@ -43,9 +41,8 @@ exports.startContainer = function(req, res){
 	   .set('Accept', 'application/json')
 	   .send(json)
 	   .end(function(err, response){
-	   		console.log(response.body);
-	   		//res.send(200);
-	     	res.json(response.body);
+	   		if (response != undefined)
+	     		res.json(response.body);
 	   });
 }
 
@@ -59,9 +56,8 @@ exports.delContainer = function(req,res){
 	   .set('Accept', 'application/json')
 	   .send(json)
 	   .end(function(err, response){
-	   		console.log(response.body);
-	   		//res.send(200);
-	     	res.json(response.body);
+	   		if (response != undefined)
+	     		res.json(response.body);
 	   });
 }
 
@@ -75,8 +71,7 @@ exports.backupContainer = function(req,res){
 	   .set('Accept', 'application/json')
 	   .send(json)
 	   .end(function(err, response){
-	   		console.log(response.body);
-	   		//res.send(200);
-	     	res.json(response.body);
+	   		if (response != undefined)
+	     		res.json(response.body);
 	   });
 }

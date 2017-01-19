@@ -10,8 +10,7 @@ exports.getContainer = function(req, res) {
 	   .set('Accept', 'application/json')
 	   .send(json)
 	   .end(function(err, response){
-	   		console.log(response.body);
-	   		//res.send(200);
-	     	res.json(response.body);
+	   		if (response != undefined)
+	     		res.json(response.body);
 	   });
 };

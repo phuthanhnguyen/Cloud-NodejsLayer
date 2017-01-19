@@ -10,7 +10,7 @@ exports.signup = function(req, res) {
 	   .set('Accept', 'application/json')
 	   .send(json)
 	   .end(function(err, response){
-	   		console.log(response);
-	     	res.json(response.body);
+	   		if (response != undefined)
+	     		res.json(response.body);
 	   });
 };
