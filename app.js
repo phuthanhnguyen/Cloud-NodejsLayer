@@ -8,6 +8,8 @@ var cors = require('cors');
 
 var login = require('./routes/login');
 var signup = require('./routes/signup');
+var getContainer = require('./routes/getContainer');
+var createContainer = require('./routes/createContainer');
 
 var app = express();
 
@@ -26,6 +28,12 @@ app.use(cors());
 
 app.post('/login', login.login);
 app.post('/signup',signup.signup);
+app.post('/getContainers',getContainer.getContainer);
+app.post('/createContainer',createContainer.createContainer);
+app.post('/stopContainer',createContainer.stopContainer);
+app.post('/startContainer',createContainer.startContainer);
+app.post('/backupContainer',createContainer.backupContainer);
+app.post('/delContainer',createContainer.delContainer);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
